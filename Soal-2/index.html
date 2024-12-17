@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hitung Rata-rata Tinggi Badan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            border: 1px solid #ccc;
+            padding: 20px;
+            margin: 0 auto;
+            width: 300px;
+        }
+        input {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #AAD4FF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Hitung Rata-rata Tinggi Badan</h2>
+        <input type="number" id="siswa1" placeholder="Tinggi Badan Siswa 1">
+        <input type="number" id="siswa2" placeholder="Tinggi Badan Siswa 2">
+        <input type="number" id="siswa3" placeholder="Tinggi Badan Siswa 3">
+        <input type="number" id="siswa4" placeholder="Tinggi Badan Siswa 4">
+        <input type="number" id="siswa5" placeholder="Tinggi Badan Siswa 5">
+        <button onclick="hitungRataRata()">Hitung</button>
+        <p>Hasil: <span id="hasil"></span></p>
+    </div>
+
+    <script>
+        function hitungRataRata() {
+            let siswa1 = parseFloat(document.getElementById('siswa1').value);
+            let siswa2 = parseFloat(document.getElementById('siswa2').value);
+            let siswa3 = parseFloat(document.getElementById('siswa3').value);
+            let siswa4 = parseFloat(document.getElementById('siswa4').value);
+            let siswa5 = parseFloat(document.getElementById('siswa5').value);
+
+            let rataRata = (siswa1 + siswa2 + siswa3 + siswa4 + siswa5) / 5;
+
+            document.getElementById('hasil').textContent = rataRata;
+        }
+    </script>
+</body>
+</html>
